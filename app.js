@@ -21,21 +21,18 @@ function validacion(){
     let nombre = document.getElementById("nombre").value;
     let radios = document.getElementsByName("programar");
     let estudia = document.getElementById("estudiante");
-    console.log(estudia)
     let valorRadio = "";
-    let estaEstudiando = "";
-    
-    
-    /* console.log(nombre);
-    console.log(valorRadio); */
+
+
+    //el for recorre los inputs radios
     for(let i = 0;i < radios.length;i++){
-        //console.log(radios[i])
-        if(radios[i].checked){
-            valorRadio = radios[i].value;
-            //onsole.log(valorRadio)
+        console.log(radios[i])//devuelve ambos nodos de input 
+        if(radios[i].checked){//checked es si el input esta seleccionado
+            valorRadio = radios[i].value;//guarda en la var el valor checkeado
+            //console.log(valorRadio)
         }
     }
-
+        //guardara en la var estudia el check del usuario
         if(estudia.checked){
             estudia = "Si"
         }else{
@@ -44,7 +41,7 @@ function validacion(){
         //console.log(estaEstudiando)
 
 
-        console.log(`Nombre: ${nombre} \nSabe programar: ${valorRadio} \nEs estudiante:  ${estudia}`);
+        console.log(`Nombre: ${nombre} \nSabe programar: ${valorRadio} \nEs estudiante:  ${estudia}`);//interpolacion de datos
 }
 
 
